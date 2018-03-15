@@ -1,5 +1,11 @@
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="music_stand")
 public class MusicStand extends StockItem {
 
     private String colour;
@@ -12,8 +18,13 @@ public class MusicStand extends StockItem {
         this.colour = colour;
     }
 
+    @Column(name="colour")
     public String getColour() {
         return this.colour;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 
     public int calculateMarkup() {
