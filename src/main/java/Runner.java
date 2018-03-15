@@ -30,6 +30,11 @@ public class Runner {
         MusicStand stand2 = new MusicStand("ostrich feather black", 4, 8);
         DBHelper.saveOrUpdate(stand2);
 
+        Guitar foundGuitar = DBHelper.find(Guitar.class, guitar2.getId());
+        Piano foundPiano = DBHelper.find(Piano.class, piano1.getId());
+        MusicStand foundStand = DBHelper.find(MusicStand.class, stand2.getId());
+        MusicBook foundBook = DBHelper.find(MusicBook.class, book1.getId());
+
         List<Guitar> guitars = DBHelper.getAll(Guitar.class);
         List<Piano> pianos= DBHelper.getAll(Piano.class);
         List<MusicStand> musicStands = DBHelper.getAll(MusicStand.class);
