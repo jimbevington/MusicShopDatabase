@@ -1,5 +1,6 @@
 package db;
 
+import com.sun.corba.se.spi.ior.ObjectKey;
 import models.Guitar;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
@@ -19,6 +20,20 @@ public class DBHelper {
         try {
             transaction = session.beginTransaction();
             session.saveOrUpdate(object);
+            transaction.commit();
+        } catch (HibernateException ex) {
+            transaction.rollback();
+            ex.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
+
+    public static void delete(Object object) {
+        session = HibernateUtil.getSessionFactory().openSession();
+        try {
+            transaction = session.beginTransaction();
+            session.delete(object);
             transaction.commit();
         } catch (HibernateException ex) {
             transaction.rollback();
