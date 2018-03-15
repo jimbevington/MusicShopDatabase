@@ -3,6 +3,9 @@ package models;
 public class MusicBook extends StockItem {
     String title;
 
+    public MusicBook() {
+    }
+
     public MusicBook(String title, int buyPrice, int sellPrice) {
         super(buyPrice, sellPrice);
         this.title = title;

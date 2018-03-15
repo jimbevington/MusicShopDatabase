@@ -2,8 +2,13 @@ package models;
 
 import models.InstrumentType;
 
+
+
 public class Piano extends Instrument {
     private String manufacturer;
+
+    public Piano() {
+    }
 
     public Piano(String manufacturer, String colour, int buyPrice, int sellPrice) {
         super(colour, InstrumentType.KEYBOARD, buyPrice, sellPrice);

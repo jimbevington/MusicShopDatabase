@@ -13,6 +13,9 @@ public abstract class Instrument extends StockItem implements IPlay {
     private String colour;
     private InstrumentType type;
 
+    public Instrument() {
+    }
+
     public Instrument(String colour, InstrumentType type, int costPrice, int retailPrice) {
         super(costPrice, retailPrice);
         this.colour = colour;

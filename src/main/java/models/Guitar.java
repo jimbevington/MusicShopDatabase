@@ -10,6 +10,9 @@ public class Guitar extends Instrument  {
     private String model;
     private int numberOfStrings;
 
+    public Guitar() {
+    }
+
     public Guitar(String model, String colour, int numberOfStrings, int costPrice, int retailPrice) {
         super(colour, InstrumentType.STRING, costPrice, retailPrice);
         this.numberOfStrings = numberOfStrings;
