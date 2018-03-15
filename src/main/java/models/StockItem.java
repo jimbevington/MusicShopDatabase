@@ -12,6 +12,9 @@ public abstract class StockItem implements ISell {
     protected int buyPrice;
     protected int sellPrice;
 
+    public StockItem() {
+    }
+
     public StockItem(int buyPrice, int sellPrice) {
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
