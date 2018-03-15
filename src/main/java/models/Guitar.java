@@ -28,7 +28,7 @@ public class Guitar extends Instrument  {
         this.model = model;
     }
 
-    @Column(name="numberOfStrings")
+    @Column(name="number_of_strings")
     public int getNumberOfStrings() {
         return this.numberOfStrings;
     }
@@ -39,10 +39,6 @@ public class Guitar extends Instrument  {
 
     public String play() {
         return "Kerrang!!!";
-    }
-
-    public int calculateMarkup() {
-        return this.sellPrice - this.buyPrice;
     }
 
 }

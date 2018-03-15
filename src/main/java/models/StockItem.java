@@ -31,7 +31,7 @@ public abstract class StockItem implements ISell {
         this.id = id;
     }
 
-    @Column(name="buyPrice")
+    @Column(name="buy_price")
     public int getBuyPrice() {
         return this.buyPrice;
     }
@@ -40,12 +40,16 @@ public abstract class StockItem implements ISell {
         this.buyPrice = buyPrice;
     }
 
-    @Column(name="sellPrice")
+    @Column(name="sell_price")
     public int getSellPrice() {
         return this.sellPrice;
     }
 
     public void setSellPrice(int sellPrice) {
         this.sellPrice = sellPrice;
+    }
+
+    public int calculateMarkup() {
+        return this.sellPrice - this.buyPrice;
     }
 }

@@ -19,7 +19,6 @@
         <mapping class = "models.MusicBook"/>
         <mapping class="models.MusicStand"/>
         <mapping class="models.Piano"/>
-        <mapping class="models.Shop"/>
         <mapping class="models.StockItem"/>
     </session-factory>
 </hibernate-configuration>

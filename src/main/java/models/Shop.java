@@ -1,37 +1,63 @@
 package models;
 
-import behaviours.ISell;
+import models.StockItem;
 
-import java.util.ArrayList;
+import javax.persistence.*;
+import java.util.List;
+
 
 public class Shop {
+
+    private int id;
     private String name;
-    private ArrayList<ISell> stock;
+    private List<StockItem> stock;
+
+    public Shop() {
+    }
 
     public Shop(String name) {
         this.name = name;
-        this.stock = new ArrayList<ISell>();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
-        return this.name;
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<StockItem> getStock() {
+        return stock;
+    }
+
+    public void setStock(List<StockItem> stock) {
+        this.stock = stock;
     }
 
     public int stockCount() {
         return this.stock.size();
     }
 
-    public void addToStock(ISell item) {
+    public void addToStock(StockItem item) {
         this.stock.add(item);
     }
 
-    public void removeFromStock(ISell item) {
+    public void removeFromStock(StockItem item) {
         this.stock.remove(item);
     }
 
     public int totalPotentialProfit() {
         int total = 0;
-        for (ISell item : stock) {
+        for (StockItem item : stock) {
             total += item.calculateMarkup();
         }
         return total;

@@ -26,8 +26,4 @@ public class MusicBook extends StockItem {
         this.title = title;
     }
 
-    public int calculateMarkup() {
-        return this.sellPrice - this.buyPrice;
-    }
-
 }

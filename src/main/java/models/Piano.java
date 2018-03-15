@@ -29,10 +29,6 @@ public class Piano extends Instrument {
         this.manufacturer = manufacturer;
     }
 
-    public int calculateMarkup() {
-        return this.sellPrice - this.buyPrice;
-    }
-
     public String play() {
         return "Plink Plonk";
     }

@@ -35,7 +35,6 @@ public class Runner {
         MusicStand foundStand = DBHelper.find(MusicStand.class, stand2.getId());
         MusicBook foundBook = DBHelper.find(MusicBook.class, book1.getId());
 
-
         DBHelper.delete(guitar1);
 
         List<Guitar> guitars = DBHelper.getAll(Guitar.class);

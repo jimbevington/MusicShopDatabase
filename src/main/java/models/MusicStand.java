@@ -18,7 +18,7 @@ public class MusicStand extends StockItem {
         this.colour = colour;
     }
 
-    @Column(name="colour")
+    @Column(name = "colour")
     public String getColour() {
         return this.colour;
     }
@@ -27,7 +27,4 @@ public class MusicStand extends StockItem {
         this.colour = colour;
     }
 
-    public int calculateMarkup() {
-        return this.sellPrice - this.buyPrice;
-    }
 }
