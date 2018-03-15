@@ -27,8 +27,13 @@ public class DBHelper {
         }
     }
 
-//    public static List<Guitar> getAll(Class<Guitar> guitarClass) {
-//    }
+    public static <T> List<T> getAll(Class classType) {
+        session = HibernateUtil.getSessionFactory().openSession();
+        List<T> results = null;
+        Criteria cr = session.createCriteria(classType);
+        results = getList(cr);
+        return results;
+    }
 
     public static <T> List<T> getList(Criteria cr){
         List<T> results = null;

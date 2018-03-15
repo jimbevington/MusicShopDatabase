@@ -31,6 +31,9 @@ public class Runner {
         DBHelper.saveOrUpdate(stand2);
 
         List<Guitar> guitars = DBHelper.getAll(Guitar.class);
+        List<Piano> pianos= DBHelper.getAll(Piano.class);
+        List<MusicStand> musicStands = DBHelper.getAll(MusicStand.class);
+        List<MusicBook> musicBooks = DBHelper.getAll(MusicBook.class);
 
     }
 }
